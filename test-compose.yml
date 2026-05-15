@@ -1,0 +1,14 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.25-management-alpine
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=thinkvitals
+      - RABBITMQ_DEFAULT_PASS=J5RnL6Wofj8IEDXEkJ4p
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
+
+networks:
+  default:
